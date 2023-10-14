@@ -40,10 +40,13 @@ public:
     void remove_recipe(string recipe_name); // remove a recipe by name
 
     Recipe* find_recipe(string recipe_name); // find a recipe by name
-    vector<Recipe> find_recipes_by_grocery(vector<string> grocery); // find recipes by grocery     
+    vector<Recipe> find_recipes_by_grocery(vector<string> gro_name); // find recipes by grocery name     
     // receives one or more grocery items as parameters,
-    // finds recipes that use all entered grocery items from the database, and return those recipes.
+    // find recipes that use all entered grocery items from the database, and return those recipes.
     
+    void load_from_file(); // load recipes from a file
+    // same as save_to_file. we can parsing recipes and its details, and then, store recipes in recipe_list.
+
     void save_to_file(); // save recipes to a file
     // save recipes like this. we can distinguish details using '----------' '\n' ':', ',' '@' '#'.
     //time -> int value. how much time it takes to cook. (min)
@@ -69,8 +72,6 @@ public:
     #(Notes)\n
     #(Notes)\n
     */
-    void load_from_file(); // load recipes from a file
-    // same as save_to_file. we can parsing recipes and its details, and then, store recipes in recipe_list.
 };
 
 #endif

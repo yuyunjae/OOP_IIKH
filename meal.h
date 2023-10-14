@@ -9,7 +9,7 @@
 
 using namespace std;
 
-// infomation of a single Meal.
+// information of a single Meal.
 class Meal {
 private:
     string meal_name; //name of the meal. example> breakfast, lunch, dinner, snack or a custom name.
@@ -19,7 +19,6 @@ private:
     Recipe_db* recipe_db;  // pointer to the recipe database to use.
 
 public:
-    // constructors
     Meal(Recipe_db* db);// meal_name = ""; num_people = 1; db is Recipe_db object to use.
     Meal(string meal_name, Recipe_db* db); // num_people = 1;
     Meal(string meal_name, int number_people, Recipe_db* db); // constructor with meal_name, number of people, Recipe_db object to use.

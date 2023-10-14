@@ -6,7 +6,7 @@
 
 using namespace std;
 
-// infomation of a single recipe.
+// information of a single recipe.
 class Recipe {
 private:
     // variables to store recipe details.
