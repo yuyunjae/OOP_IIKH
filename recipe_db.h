@@ -49,28 +49,30 @@ public:
 
     void save_to_file(); // save recipes to a file
     // save recipes like this. we can distinguish details using '----------' '\n' ':', ',' '@' '#'.
-    //time -> int value. how much time it takes to cook. (min)
+    // time -> int value. how much time it takes to cook. (min)
+    // cooking_method and user_notes may not just 1 sentence. so we use @ and # before every sentence.
     /*
+    
     ----------\n
     recipe_name1\n
     grocery_name1-1: amout, grocery_name1-2: amout, ...\n
     time\n
-    @(Cooking Method)\n
-    @(Cooking Method)\n
-    @(Cooking Method)\n
-    #(Notes)\n
-    #(Notes)\n
-    #(Notes)\n
+    @(cooking_method)
+    @(cooking_method)
+    @(cooking_method)\n
+    #(user_notes)
+    #(user_notes)
+    #(user_notes)\n
     ----------\n
     recipe_name2\n
     grocery_name2-1: amout, grocery_name2-2: amout, ...\n
     time\n
-    @(Cooking Method)\n
-    @(Cooking Method)\n
-    @(Cooking Method)\n
-    @(Cooking Method)\n
-    #(Notes)\n
-    #(Notes)\n
+    @(cooking_method)
+    @(cooking_method)
+    @(cooking_method)
+    @(cooking_method)\n
+    #(user_notes)
+    #(user_notes)\n
     */
 };
 

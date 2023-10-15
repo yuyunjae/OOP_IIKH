@@ -37,6 +37,7 @@ public:
     void remove_meal(string meal_name); // remove a meal based on its name example> breakfast, lunch, dinner
     Meal get_meal(string meal_name); // get the meal based on its name
     void modify_meal(string meal_name, Meal new_meal); // modify a meal (replace one meal with another)
+    string get_all_meal_name(); // return all meal name parsing by '?' ex> dinner?snack?lunch?custom
 
     void set_annotation(string annotation); // set annotation for the date
     string get_annotation(); // get annotation for the date

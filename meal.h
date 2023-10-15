@@ -17,9 +17,10 @@ private:
     int prepare_time; // time taken to prepare a meal.
     vector<Recipe> recipes;  // recipes for the meal
     Recipe_db* recipe_db;  // pointer to the recipe database to use.
+    string notes; // notes or annotations about the meal.
 
 public:
-    Meal(Recipe_db* db);// meal_name = ""; num_people = 1; db is Recipe_db object to use.
+    Meal(Recipe_db* db);// meal_name = "none"; num_people = 1; db is Recipe_db object to use.
     Meal(string meal_name, Recipe_db* db); // num_people = 1;
     Meal(string meal_name, int number_people, Recipe_db* db); // constructor with meal_name, number of people, Recipe_db object to use.
     
@@ -34,8 +35,14 @@ public:
 
     void set_meal_name(string meal_name); // set name of the meal.
     string get_meal_name(); // get name of the meal.
+    string get_all_recipe_name(); // return all recipe name parsing by '?' ex> pizza?chicken?Galbijjim?pork cutlet
+
+    void set_annotation(string annotation); // set annotation for the meal
+    string get_annotation(); // get annotation for the meal
 
     int check_already_in_meal(string recipe_name); // if there is a recipe already in meal -> return 1 // else return 0
+    Recipe* find_recipe(string recipe_name); // find a recipe by name
+    void add_recipe(string recipe_name); // add_recipe by using recipe_db;
 
     void select_and_add_recipe_from_db(string recipe_name);  // selects a recipe from the database and adds to the meal
     void remove_recipe_in_meal(string recipe_name); // removes a recipe from the meal by its name.
